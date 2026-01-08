@@ -1,4 +1,11 @@
 ## Online Store System
+- A fully interactive, browser-based platform built with HTML, CSS, JavaScript, and MySQL
+- It allows users to manage products, customers, and orders through dynamic tables, intuitive forms, and client-side validation
+- While maintaining a colorful, engaging, and responsive interface.
+- Behind the scenes, the system is designed to follow relational database principles, ensuring meaningful relationships between tables and consistent data integrity
+- Every page demonstrates CRUD operations, and the sample SQL script showcases the database schema and initial data for seamless demonstration.
+- This project subtly integrates all aspects of the course objectives: from database management to front-end development, styling, interactivity, and usability — without overwhelming the user
+- Everything needed to see the system in action, from forms to live tables, is included and documented
 - Complte with peding/queued orders and customer
 - Show casing different products
 - has actual interactive interfaces throughout each formatted scheme
