@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mini Store - Customers</title>
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #ffeaa7, #fab1a0);
+    color: #2d3436;
+    margin: 20px;
+}
+h2 {
+    color: #6c5ce7;
+    text-shadow: 1px 1px #fd79a8;
+}
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-top: 20px;
+    background-color: #fff3e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+th, td {
+    border: 1px solid #dfe6e9;
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background-color: #74b9ff;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #dfe6e9;
+}
+input, button {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+button {
+    background-color: #0984e3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background-color: #74b9ff;
+    transform: scale(1.05);
+}
+form {
+    background-color: #ffeaa7;
+    padding: 15px;
+    border-radius: 10px;
+    width: fit-content;
+}
+</style>
+<script>
+function validateForm() {
+    let name = document.forms["customerForm"]["name"].value;
+    let email = document.forms["customerForm"]["email"].value;
+    if(name=="" || email=="") {
+        alert("Both fields are required!");
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body>
+
+<h2>Customers</h2>
+
+<form name="customerForm" onsubmit="return validateForm()">
+    Name: <input type="text" name="name" placeholder="Enter name">
+    Email: <input type="email" name="email" placeholder="Enter email">
+    <button type="submit">Add Customer</button>
+</form>
+
+<table>
+<tr><th>ID</th><th>Name</th><th>Email</th></tr>
+<tr><td>1</td><td>Alice</td><td>alice@email.com</td></tr>
+<tr><td>2</td><td>Bob</td><td>bob@email.com</td></tr>
+<tr><td>3</td><td>Charlie</td><td>charlie@email.com</td></tr>
+</table>
+
+</body>
+</html>
