@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mini Store - Orders</title>
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #a8edea, #fed6e3);
+    color: #2d3436;
+    margin: 20px;
+}
+h2 {
+    color: #d63031;
+    text-shadow: 1px 1px #ffeaa7;
+}
+table {
+    border-collapse: collapse;
+    width: 85%;
+    margin-top: 20px;
+    background-color: #fff5f3;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+th, td {
+    border: 1px solid #dfe6e9;
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background-color: #e17055;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #ffeaa7;
+}
+input, select, button {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+button {
+    background-color: #e17055;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background-color: #d63031;
+    transform: scale(1.05);
+}
+form {
+    background-color: #ffeaa7;
+    padding: 15px;
+    border-radius: 10px;
+    width: fit-content;
+}
+</style>
+<script>
+function validateForm() {
+    let customer = document.forms["orderForm"]["customer_id"].value;
+    let product = document.forms["orderForm"]["product_id"].value;
+    let quantity = document.forms["orderForm"]["quantity"].value;
+    if(customer=="" || product=="" || quantity=="") {
+        alert("All fields are required!");
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body>
+
+<h2>Orders</h2>
+
+<form name="orderForm" onsubmit="return validateForm()">
+    Customer ID: <input type="number" name="customer_id" placeholder="Enter customer ID">
+    Product ID: <input type="number" name="product_id" placeholder="Enter product ID">
+    Quantity: <input type="number" name="quantity" placeholder="Enter quantity">
+    <button type="submit">Add Order</button>
+</form>
+
+<table>
+<tr><th>Order ID</th><th>Customer ID</th><th>Product ID</th><th>Quantity</th><th>Order Date</th></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>2026-01-07</td></tr>
+<tr><td>2</td><td>2</td><td>2</td><td>2</td><td>2026-01-06</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>1</td><td>2026-01-05</td></tr>
+</table>
+
+</body>
+</html>
